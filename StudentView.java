@@ -1,8 +1,13 @@
 import java.util.Scanner;
-class StudentView{
+
+class StudentView {
+
     Scanner sc = new Scanner(System.in);
-    void showMenu(){
-        System.out.println("\n--- Student Management Menu ---");
+
+    void showMenu() {
+
+        System.out.println("\n--- Student Management System ---");
+
         System.out.println("1. Add Student");
         System.out.println("2. Display Students");
         System.out.println("3. Search Student");
@@ -10,33 +15,30 @@ class StudentView{
         System.out.println("5. Delete Student");
         System.out.println("6. Exit");
     }
-    int getChoice(){
-        System.out.print("Enter choice: ");
+
+    int getChoice() {
+
+        System.out.print("Enter Choice: ");
         return sc.nextInt();
     }
-    int getId(){
-        System.out.print("Enter Student ID: ");
+
+    int getId() {
+
+        System.out.print("Enter ID: ");
         return sc.nextInt();
     }
-    String getName(){
+
+    String getName() {
+
         sc.nextLine();
-        System.out.print("Enter Student Name: ");
+
+        System.out.print("Enter Name: ");
         return sc.nextLine();
     }
-    int getMarks(){
+
+    int getMarks() {
+
         System.out.print("Enter Marks: ");
         return sc.nextInt();
-    }
-    void displayStudents(Student[] students, int count){
-        System.out.println("\nStudent Records:");
-        for(int i = 0; i < count; i++){
-            System.out.println(
-                    students[i].id + " - " +
-                    students[i].name + " - " +
-                    students[i].marks);
-        }
-    }
-    void showMessage(String msg){
-        System.out.println(msg);
     }
 }
